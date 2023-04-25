@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../Header/Header.jsx'
 import './App.css';
+import CalculatorContainer from '../CalculatorContainer/CalculatorContainer.jsx';
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
         <div className="App">
             <Header />
             <main>
-                <p>Under Construction...</p>
+                <CalculatorContainer />
             </main>
         </div>
     );
