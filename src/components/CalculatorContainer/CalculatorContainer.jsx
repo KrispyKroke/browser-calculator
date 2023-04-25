@@ -8,3 +8,6 @@ function CalculatorContainer() {
         </div>
     );
 }
+
+
+export default CalculatorContainer;
