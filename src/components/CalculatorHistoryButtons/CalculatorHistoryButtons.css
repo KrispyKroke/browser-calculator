@@ -1,0 +1,23 @@
+.ToggleHistoryBlock, .ClearHistoryBlock {
+    display: flex;
+    margin: 20px;
+}
+
+#toggleHistoryBtn {
+    background-color: lime;
+    border-radius: 25%;
+}
+
+#clearHistoryBtn {
+    background-color: crimson;
+    border-radius: 25%;
+}
+
+button {
+    font-size: 23px;
+}
+
+#containerChild {
+    width: 40%;
+    float: center;
+}

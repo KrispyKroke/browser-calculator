@@ -3,7 +3,7 @@ import './CalculatorButtons.css';
 
 function CalculatorButtons() {
     return (
-        <div className='CalcButtons'>
+        <div className='CalcButtons' id='containerChild'>
             <div className='Row1'>
                 <button id='clearBtn'>C</button>
                 <button id='negationBtn'>+/-</button>

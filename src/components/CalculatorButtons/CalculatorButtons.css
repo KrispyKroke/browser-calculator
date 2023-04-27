@@ -24,3 +24,12 @@ button {
     border-radius: 45%;
 }
 
+#containerChild {
+    width: 40%;
+    float: left;
+}
+
+#clearBtn, #negationBtn, #percentBtn, #divisionBtn {
+    font-size: 30px;
+}
+
