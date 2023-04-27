@@ -1,0 +1,26 @@
+.CalcButtons {
+    margin: 15px;
+}
+
+.Row1, .Row2, .Row3, .Row4, .Row5 {
+    margin: 5px;
+}
+
+#clearBtn, #seven, #four, #one, #zero, #negationBtn, #eight, 
+#five, #two, #decimal, #percentBtn, 
+#equalSign, #nine, #six, #three {
+    margin-right: 6px;
+}
+
+#divisionBtn, #multiplicationBtn, #subtractBtn,
+#addBtn, #percentBtn, #nine, #six, #three, #equalSign,
+#negationBtn, #eight, #five, #two, #decimal {
+    margin-left: 6px;
+} 
+
+button {
+    background-color: orange;
+    font-size: 38px;
+    border-radius: 45%;
+}
+
