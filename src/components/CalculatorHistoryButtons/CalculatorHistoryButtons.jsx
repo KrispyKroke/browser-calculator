@@ -3,9 +3,9 @@ import './CalculatorHistoryButtons.css';
 
 function CalculatorHistoryButtons() {
     return (
-        <div id='containerChild'>
+        <div id='containerChild' className='CalcHistoryBlock'>
             <div className='ToggleHistoryBlock'>
-                <button id='toggleHistoryBtn'>Toggle History</button>
+                <button id='toggleHistoryBtn'>Show/Hide History</button>
             </div>
             <div className='ClearHistoryBlock'>
                 <button id='clearHistoryBtn'>Clear History</button>

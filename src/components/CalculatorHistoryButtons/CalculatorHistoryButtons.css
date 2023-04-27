@@ -1,6 +1,7 @@
 .ToggleHistoryBlock, .ClearHistoryBlock {
     display: flex;
     margin: 20px;
+    text-align: center;
 }
 
 #toggleHistoryBtn {
@@ -14,10 +15,17 @@
 }
 
 button {
-    font-size: 23px;
+    font-size: 25px;
 }
 
 #containerChild {
     width: 40%;
-    float: center;
+    display: inline-block;
+    border: 5px solid black;
+    height: 200px;
+}
+
+.CalcHistoryBlock {
+    margin-right: 10px;
+    margin-left: 46px;
 }

@@ -1,9 +1,14 @@
-.CalcButtons {
-    margin: 15px;
-}
-
 .Row1, .Row2, .Row3, .Row4, .Row5 {
     margin: 5px;
+}
+
+.Row1 {
+    width: 100%;
+    text-align: left;
+}
+
+#inner {
+    display: inline-block;
 }
 
 #clearBtn, #seven, #four, #one, #zero, #negationBtn, #eight, 
@@ -25,11 +30,19 @@ button {
 }
 
 #containerChild {
-    width: 40%;
-    float: left;
+    width: 45%;
+    height: 200px;
+    display: inline-block;
+    border: 5px solid black;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 #clearBtn, #negationBtn, #percentBtn, #divisionBtn {
-    font-size: 30px;
+    font-size: 20px;
+}
+
+.CalcButtons {
+    margin-left: 10px;
 }
 

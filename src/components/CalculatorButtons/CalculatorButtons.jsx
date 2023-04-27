@@ -5,10 +5,10 @@ function CalculatorButtons() {
     return (
         <div className='CalcButtons' id='containerChild'>
             <div className='Row1'>
-                <button id='clearBtn'>C</button>
-                <button id='negationBtn'>+/-</button>
-                <button id='percentBtn'>%</button>
-                <button id='divisionBtn'>/</button>
+                <div id='inner'><button id='clearBtn'>C</button></div>
+                <div id='inner'><button id='negationBtn'>+/-</button></div>
+                <div id='inner'><button id='percentBtn'>%</button></div>
+                <div id='inner'><button id='divisionBtn'>/</button></div>
             </div>
             <div className='Row2'>
                 <button id='seven'>7</button>

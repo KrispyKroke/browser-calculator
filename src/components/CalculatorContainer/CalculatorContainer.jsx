@@ -8,8 +8,10 @@ function CalculatorContainer() {
     return (
         <div className='Container'>
             <CalculatorDisplay />
-            <CalculatorButtons />
-            <CalculatorHistoryButtons />
+            <div className='ButtonsContainer'>
+                <CalculatorButtons />
+                <CalculatorHistoryButtons />
+            </div>
         </div>
     );
 }
