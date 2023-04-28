@@ -10,7 +10,7 @@
 }
 
 #clearHistoryBtn {
-    background-color: crimson;
+    background-color: orangered;
     border-radius: 25%;
 }
 
@@ -28,4 +28,5 @@ button {
 .CalcHistoryBlock {
     margin-right: 10px;
     margin-left: 46px;
+    transform: translateY(-53px);
 }
