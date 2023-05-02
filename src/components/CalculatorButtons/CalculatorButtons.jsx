@@ -8,15 +8,17 @@ function CalculatorButtons() {
 
 
     function calculate(calculation) {
-        if (typeof num1 === 'number' && typeof num2 === 'number' && calculation === '=') {
+        let tempNum1 = Number(num1);
+        let tempNum2 = Number(num2);
+        if (typeof tempNum1 === 'number' && typeof tempNum2 === 'number' && calculation === '=') {
             if (operation === '+') {
-                setResult(num1 + num2);
+                setResult(tempNum1 + tempNum2);
             } else if (operation === '-') {
-                setResult(num1 - num2);
+                setResult(tempNum1 - tempNum2);
             } else if (operation === '*') {
-                setResult(num1 * num2);
+                setResult(tempNum1 * tempNum2);
             } else if (operation === '/') {
-                setResult(num1 / num2);
+                setResult(tempNum1 / tempNum2);
             }
             setOperation('');
             setIsFirstNumClicked(false);
@@ -26,9 +28,17 @@ function CalculatorButtons() {
             setNum1('');
             setNum2('');
         } else if (calculation === '%') {
-            setResult(num1 * 0.01);
+            if (tempNum1 === 0) {
+                setResult(result * 0.01);
+            } else {
+                setResult(tempNum1 * 0.01);
+            }
         } else {
-            setResult(num1 * -1);
+            if (tempNum1 === 0) {
+                setResult(result * -1);
+            } else {
+                setResult(tempNum1 * -1);
+            }
         }
 
         if (!result) {
@@ -51,18 +61,25 @@ function CalculatorButtons() {
     function pickNum(val) {
         if (!isFirstNumClicked && (typeof val === 'number' || val === '.')) {
             if (operation !== '') {
-                setNum2(Number(num2 + '' + val));
+                setNum2(num2 + '' + val);
                 setIsFirstNumClicked(true);
                 if (result) {
                     setNum1(result);
                     calculate('=');
                 }
             } else {
-                setNum1((Number(num1 + '' + val)))
+                setNum1(num1 + '' + val)
             }
             setResult('');
         } else if (isFirstNumClicked && !result && (typeof val === 'number' || val === '.')) {
-                setNum2(Number(num2 + '' + val));
+            setNum2(num2 + '' + val);
+        } else {
+            setNum1(result);
+            if (num2.length === result) {
+                setNum2(val);
+            } else {
+                setNum2(num2 + '' + val);
+            }
         }
     }
 
