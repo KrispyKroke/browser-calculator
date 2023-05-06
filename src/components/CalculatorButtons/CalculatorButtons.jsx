@@ -75,7 +75,7 @@ function CalculatorButtons() {
             setNum2(num2 + '' + val);
         } else {
             setNum1(result);
-            if (num2.length === result) {
+            if (num2.length === result.length) {
                 setNum2(val);
             } else {
                 setNum2(num2 + '' + val);
