@@ -12,6 +12,7 @@ function CalculatorButtons() {
     // and performs either addition, subtraction, multiplication, and division, depending
     // on what is desired.
     function equals(num1, num2) {
+
         let expressionArr = expression.split('');
         let minusCount = 0;
         for (let char of expressionArr) {
@@ -147,6 +148,9 @@ function CalculatorButtons() {
         } else {
            percent();
         }
+        if (expression.length > 28) {
+            setExpression(expression.toPrecision(28));
+        }
     }
 
     const [expression, setExpression] = useState('');
@@ -161,7 +165,11 @@ function CalculatorButtons() {
         } else if (expression.length === 1 && expression[0] === '0') {
             setExpression(val + '');
         } else {
-            setExpression(expression + '' + val);
+            if (expression.length > 27) {
+                setExpression((expression + '' + val).toPrecision(28));
+            } else {
+                setExpression(expression + '' + val);
+            }
         }
     }
 
