@@ -18,10 +18,10 @@ router.get('/', (req, res) => {
 router.post('/add', (req, res) => {
     const calculation = req.body;
     const queryText = `INSERT INTO "calculations" 
-    ("expression", "equal_sign", "result") VALUES
-    ($1, $2, $3);`;
+    ("expression", "result") VALUES
+    ($1, $2);`;
     pool.query(queryText, [calculation.expression, 
-    calculation.equal_sign, calculation.result]).then(response => {
+    calculation.result]).then(response => {
         res.sendStatus(201);
     }).catch(error => {
         console.log(error);
