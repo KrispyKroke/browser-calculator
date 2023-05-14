@@ -1,6 +1,6 @@
 
 
-const calculationsReducer = (state = {}, action) => {
+const calculationsReducer = (state = [], action) => {
     if (action.type === 'SET_CALCULATIONS') {
         return action.payload;
     }
