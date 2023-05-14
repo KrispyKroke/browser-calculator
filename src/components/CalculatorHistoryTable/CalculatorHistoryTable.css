@@ -1,0 +1,11 @@
+.TableContainer {
+    width: 50%;
+    float: right;
+}
+
+th, td {
+    position: center;
+    font-family: Impact;
+    font-size: 35px;
+    color: blue;
+}

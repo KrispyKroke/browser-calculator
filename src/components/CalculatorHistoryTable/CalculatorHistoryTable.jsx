@@ -24,7 +24,7 @@ function CalculatorHistoryTable({isShowing}) {
                     {equations?.map((equation) => {
                         return (
                             <tr key={equation.id}>
-                                <td>{equation.expression} = {equation.result}</td>
+                                <td> ~ {equation.expression} = {equation.result}</td>
                             </tr>
                         );
                     })}
