@@ -1,5 +1,5 @@
 import React from 'react';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
 import Header from '../Header/Header.jsx'
@@ -13,6 +13,8 @@ function App() {
 
     const dispatch = useDispatch();
 
+    const [isShowing, setIsShowing] = useState(true);
+
     useEffect(() => {
         dispatch({type: 'CLEAR_CALCULATIONS'});
     }, []);
@@ -21,8 +23,8 @@ function App() {
         <div className="App">
             <Header />
             <main>
-                <CalculatorContainer />
-                <CalculatorHistoryTable />
+                <CalculatorContainer isShowing={isShowing} setIsShowing={setIsShowing} />
+                <CalculatorHistoryTable isShowing={isShowing} />
             </main>
         </div>
     );

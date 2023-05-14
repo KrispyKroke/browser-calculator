@@ -3,12 +3,12 @@ import './CalculatorContainer.css';
 import CalculatorButtons from '../CalculatorButtons/CalculatorButtons';
 import CalculatorHistoryButtons from '../CalculatorHistoryButtons/CalculatorHistoryButtons';
 
-function CalculatorContainer() {
+function CalculatorContainer({isShowing, setIsShowing}) {
     return (
         <div className='Container'>
             <div className='ButtonsContainer'>
                 <CalculatorButtons />
-                <CalculatorHistoryButtons />
+                <CalculatorHistoryButtons isShowing={isShowing} setIsShowing={setIsShowing} />
             </div>
         </div>
     );
