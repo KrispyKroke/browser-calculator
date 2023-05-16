@@ -1,9 +1,12 @@
 import React from 'react';
 import {useState} from 'react';
+import {useDispatch} from 'react-redux';
 import './CalculatorButtons.css';
 import CalculatorDisplay from '../CalculatorDisplay/CalculatorDisplay';
 
 function CalculatorButtons() {
+
+    const dispatch = useDispatch();
 
 
     // This function determines which of the four basic operations
@@ -59,6 +62,7 @@ function CalculatorButtons() {
                     return;
                 }
                 setExpression(Number(num1) + Number(num2) + '');
+                dispatch({type: 'ADD_CALCULATION', payload: {expression: num1 + ' + ' + num2, result: Number(num1) + Number(num2) + ''}});
             } else if (expression.includes('*')) {
                 num1 = expression.slice(0, expression.indexOf('*'));
                 if (expression.indexOf('*') === expression.length - 1 ||
@@ -74,6 +78,7 @@ function CalculatorButtons() {
                     return;
                 }
                 setExpression(Number(num1) * Number(num2) + '');
+                dispatch({type: 'ADD_CALCULATION', payload: {expression: num1 + ' * ' + num2, result: Number(num1) * Number(num2) + ''}});
             } else if (expression.includes('/')) {
                 num1 = expression.slice(0, expression.indexOf('/'));
                 if (expression.indexOf('/') === expression.length - 1 ||
@@ -89,6 +94,7 @@ function CalculatorButtons() {
                     return;
                 }
                 setExpression(Number(num1) / Number(num2) + '');
+                dispatch({type: 'ADD_CALCULATION', payload: {expression: num1 + ' / ' + num2, result: Number(num1) / Number(num2) + ''}});
             } else if (expression.includes('-')) {
                 num1 = expression.slice(0, expression.lastIndexOf('-'));
                 if (expression.indexOf('-') === expression.length - 1 ||
@@ -104,6 +110,7 @@ function CalculatorButtons() {
                         return;
                     }
                     setExpression(Number(num1) - Number(num2) + '');
+                    dispatch({type: 'ADD_CALCULATION', payload: {expression: num1 + ' - ' + num2, result: Number(num1) - Number(num2) + ''}});
             } else {
                 alert('You must choose an operation for calculation to occur!');
             }

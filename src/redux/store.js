@@ -3,7 +3,7 @@ import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
 
 import calculationsSaga from './sagas/calculations.saga';
-import calculationsReducer from './reducers/calculations.reducer';
+import rootReducer from './reducers/_root.reducer';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -13,7 +13,7 @@ const middlewareList = process.env.NODE_ENV === 'development' ?
 [sagaMiddleware];
 
 const store = createStore(
-    calculationsReducer,
+    rootReducer,
     applyMiddleware(...middlewareList),
 );
 
