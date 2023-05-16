@@ -1,9 +1,16 @@
-# React Shopping List
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# In-Browser Calculator
+By Jared Kroke
 
 ## Description
+This was a self-driven project (outside of an academic/work setting) I started to practice some of my skills associated with React, Node.js, Redux/Sagas, and SQL.  I created an interactive calculator with the added feature of a calculator history display.  The user can perform addition, subtraction, multiplication, and division.  They can also manipulate decimal numbers, negate numbers, and get percent values.
 
-Your project description goes here. What problem did you solve? How did you solve it?
+The calculation history display can be toggled from shown to hidden, and history can be cleared at the click of a button.  This also wipes the history on the back-end as well.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+I enjoyed working on this project, and plan on tackling other challenges now that this has been completed.  I hope that you enjoy what I have created here.
+
+## Technologies Used
+- Node.js
+- SQL
+- React
+- Redux
+
