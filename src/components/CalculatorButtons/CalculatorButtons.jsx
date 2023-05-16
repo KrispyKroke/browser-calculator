@@ -24,19 +24,22 @@ function CalculatorButtons() {
             }
         }
         
-        if (minusCount === 1 && expression.indexOf('-') !== 0 
+        if (minusCount === 1 && (expression.indexOf('-') !== 0 &&
+        !expression.includes('e')) 
         && (expression.includes('+') || 
         expression.includes('*') || expression.includes('/'))) {
             alert('You can only perform one operation at a time!');
             clear();
             return;
-        } else if (minusCount === 2 && (expression.indexOf('-') !== 0 ||
+        } else if (minusCount === 2 && ((expression.indexOf('-') !== 0 &&
+        !expression.includes('e')) ||
         (expression.includes('+') || 
         expression.includes('*') || expression.includes('/')))) {
             alert('The operation you are trying to perform is invalid!');
             clear();
             return;
-        } else if (minusCount > 2) {
+        } else if (minusCount > 3 ||  
+            (minusCount === 3 && !expression.includes('e'))) {
             alert('You must input a valid expression!');
             clear();
             return;
